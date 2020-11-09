@@ -2,16 +2,16 @@
 class Awschain < Formula
   desc "awschain is set current AWS* environment variables to envchain namespace."
   homepage "https://github.com/tatsuo48/awschain"
-  version "0.1.3"
+  version "0.1.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tatsuo48/awschain/releases/download/v0.1.3/awschain_darwin_x86_64.tar.gz"
-    sha256 "3aa1741ebabe6100b26868baf7b1468071a12a5660c310f20a78e8fc7dc42ec7"
+    url "https://github.com/tatsuo48/awschain/releases/download/v0.1.4/awschain_darwin_x86_64.tar.gz"
+    sha256 "d2fe69b2ac1f9470bbf2f06f0094f2b8f70e5f90417e67e05da79b55263713b8"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tatsuo48/awschain/releases/download/v0.1.3/awschain_linux_x86_64.tar.gz"
-      sha256 "f2fa207b8786f1117b33478bad3931c5a7e083f19f4de66a319cb99ae713d2ed"
+      url "https://github.com/tatsuo48/awschain/releases/download/v0.1.4/awschain_linux_x86_64.tar.gz"
+      sha256 "e1d52f58883c702acdd8a5bf25f5a259f75ece331e63a836d76a431d1e943dba"
     end
   end
 
