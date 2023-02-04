@@ -5,20 +5,20 @@
 class Ecsource < Formula
   desc "ECS Task Definition tool to display resources such as CPU, memory, and memory reservations in an easy-to-read format."
   homepage "https://github.com/tatsuo48/ecsource"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.1/ecsource_darwin_x86_64.tar.gz"
-      sha256 "c89fbe3599e0f1b7bb7f1d251e0997b6007e890364a4fc3b73e6b447feffc6d0"
+    if Hardware::CPU.arm?
+      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.2/ecsource_Darwin_arm64.tar.gz"
+      sha256 "561dceb18daf849bc6826a1bac4f0ffa3ea9d0c37775a1c5bb81d5b5492963c0"
 
       def install
         bin.install "ecsource"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.1/ecsource_darwin_arm64.tar.gz"
-      sha256 "07a0f11deb0996d858aabb3361c541bf40f03c960af0039f933f7d34a3c115e0"
+    if Hardware::CPU.intel?
+      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.2/ecsource_Darwin_x86_64.tar.gz"
+      sha256 "5dbf248a4cc442f5497cd5e4ac3e509f4144bdbfb12ff658af68cf053481f5bb"
 
       def install
         bin.install "ecsource"
@@ -28,16 +28,16 @@ class Ecsource < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.1/ecsource_linux_x86_64.tar.gz"
-      sha256 "bb39c9ea8f639daf1bb46751b2ff43e8378f1e11876bf2c83d6e1b8b31db7441"
+      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.2/ecsource_Linux_x86_64.tar.gz"
+      sha256 "c024c203eba9d346a9c2f4b81586f026e3b87a6091090cbfcc1211ec5c0465a8"
 
       def install
         bin.install "ecsource"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.1/ecsource_linux_arm64.tar.gz"
-      sha256 "59db923f50a5f3f9a1015843f7016f0263eef49ca1ba0db1a94d675210de4804"
+      url "https://github.com/tatsuo48/ecsource/releases/download/v1.0.2/ecsource_Linux_arm64.tar.gz"
+      sha256 "9a6ed3892a80a600309e53c05b91ba97f7bd1ca3ae0170bad3717e89196897b4"
 
       def install
         bin.install "ecsource"
